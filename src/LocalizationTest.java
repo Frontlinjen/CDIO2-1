@@ -3,8 +3,9 @@ import java.util.ResourceBundle;
 
 public class LocalizationTest {
 
+	static ResourceBundle messages;
+	 
 	public static void main(String[] args) {
-		
 		Locale[] locales = { new Locale("da", "DK"), new Locale("en", "GB") };
 		ResourceBundle messages;
 		for(Locale locale : locales)

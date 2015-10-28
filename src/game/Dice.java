@@ -7,10 +7,12 @@ public class Dice {
 	DiceResult latestPair = new DiceResult(0, 0);
 	Random psudoGen = new Random(System.currentTimeMillis());
 
+
 	
 	
 	public DiceResult rollDice()
 	{
+		
 		previousPair = latestPair;
 		int firstRoll = psudoGen.nextInt(6)+1; //Returns a number between 1 and 6 since 6 is exclusive. 
 		int secondRoll = psudoGen.nextInt(6)+1;
