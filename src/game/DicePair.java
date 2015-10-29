@@ -4,20 +4,19 @@ import java.util.Random;
 
 public class DicePair extends BaseDice{
 	private DiceResult latestRoll;
-	int firstDie;
-	int secondDie;
+
 	
 	Random psudoGen = new Random(System.currentTimeMillis());
 
 
 	public void rollDice()
 	{
-		firstDie = psudoGen.nextInt(6)+1; //Returns a number between 1 and 6 since 6 is exclusive. 
-		secondDie = psudoGen.nextInt(6)+1;
+		int firstDie = psudoGen.nextInt(6)+1; //Returns a number between 1 and 6 since 6 is exclusive. 
+		int secondDie = psudoGen.nextInt(6)+1;
+		latestRoll = new DiceResult(firstDie, secondDie);
  	}
 	
 	public int result(){
-		int result = firstDie + secondDie;
-		return result;
+		return latestRoll.getSnakeEyes();
 	}
 }
