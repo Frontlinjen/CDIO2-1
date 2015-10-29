@@ -5,7 +5,7 @@ import java.util.ResourceBundle;
 
 public class Translator {
 	static ResourceBundle strings;
-	public static String setString(String keyword)
+	public static String getString(String keyword)
 	{
 		//If not previous set, use default locale(da, DK)
 		if(strings==null)
