@@ -9,6 +9,7 @@ public class Player {
 	 * Each player has their own set of dice which keeps track of their rolls. 
 	 */
 	protected Dice dice = new Dice();
+	Account account = new Account();
 	
 	public Player(String s)
 	{
@@ -20,18 +21,18 @@ public class Player {
 	}
 	public int getPoints()
 	{
-		return points;
+		return account.getGold();
 	}
 	public void setPoints(int p)
 	{
 		//GUI.removeAllCars(name);
-		points = p;
+		account.setGold(p);
 		//GUI.setCar(Math.min(points, 40), name);
 		GUI.setBalance(name, points);
 	}
 	public void addPoints(int p)
 	{
-		setPoints(p+points);
+		account.addGold(p);
 	}
 	public Dice getDice()
 	{
