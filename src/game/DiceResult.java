@@ -5,19 +5,7 @@ package game;
 public class DiceResult
 {
 	int[] eyes = new int[2];
-	public DiceResult(int first, int second)
-	{
-		eyes[0] = first;
-		eyes[1] = second;
-	}
-	public boolean isPair()
-	{
-		return eyes[0]==eyes[1];
-	}
-	public int snakeEyes()
-	{
-		return eyes[0] + eyes[1];
-	}
+	
 	public int getFirstDice()
 	{
 		return eyes[0];
@@ -26,5 +14,9 @@ public class DiceResult
 	{
 		return eyes[1];
 	}
-};
+	public int getSum(){
+		
+		return eyes[1] + eyes[0];
+	}
+}
 
