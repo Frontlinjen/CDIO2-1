@@ -6,7 +6,12 @@ public class Slot {
 	private String name;
 	private String description;
 	
-	
+	public Slot(){
+		value = 0;
+		name = "";
+		description = "";
+	}
+
 	public int getValue() {
 		return value;
 	}
