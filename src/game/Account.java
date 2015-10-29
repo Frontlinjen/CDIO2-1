@@ -2,6 +2,10 @@ package game;
 
 public class Account {
 
+	public Account(){
+		gold = 0;
+	}
+	
 	private int gold;
 
 	public int getGold() {
