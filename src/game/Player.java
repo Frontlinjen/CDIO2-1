@@ -8,7 +8,7 @@ public class Player {
 	/**
 	 * Each player has their own set of dice which keeps track of their rolls. 
 	 */
-	protected Dice dice = new Dice();
+	protected BaseDice dice = new DicePair();
 	Account account = new Account();
 	
 	public Player(String s)
@@ -34,7 +34,7 @@ public class Player {
 	{
 		account.addGold(p);
 	}
-	public Dice getDice()
+	public BaseDice getDice()
 	{
 		return dice;
 	}
