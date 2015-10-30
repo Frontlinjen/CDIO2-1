@@ -1,5 +1,7 @@
 package game;
 
+import java.util.ResourceBundle;
+
 public class Slot {
 
 	private int value;
